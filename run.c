@@ -58,7 +58,7 @@ void *m_malloc(size_t size) {
 	int m1 = size + META_SIZE;
 	int m2;
 
-	new_size = (size/4)*4 + 4;
+	int new_size = (size/4)*4 + 4;
 	p_meta tmp = find_meta(end,size);
 	char *p =NULL;
 
@@ -81,9 +81,9 @@ void *m_malloc(size_t size) {
 		else
 		{
 		 tmp ->prev = end;
-		 p_meta end_tmp = = end;
+		 p_meta end_tmp =  end;
 
-		end_tmp -> next = temp;
+		end_tmp -> next = tmp;
 		end = temp; 
 		}
 	}
