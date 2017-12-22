@@ -84,17 +84,17 @@ void *m_malloc(size_t size) {
 		 p_meta end_tmp =  end;
 
 		end_tmp -> next = tmp;
-		end = temp; 
+		end = tmp; 
 		}
 	}
 	else
 	{
 
-		temp = (NULL, new_size);
+		tmp = (NULL, new_size);
 		
-		if(!temp)
+		if(!tmp)
 			return NULL;
-		base = temp;
+		base = tmp;
 
 	}
 	
